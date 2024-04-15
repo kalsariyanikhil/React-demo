@@ -1,6 +1,7 @@
 import React from 'react'
 import './Card.css'
 
+
 function Card(props) {
   return (
     <div className='card-Box mt-6 mx-4 w-[20rem] rounded-2xl overflow-hidden'>

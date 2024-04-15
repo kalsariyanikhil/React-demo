@@ -1,4 +1,5 @@
 import Card from "./Component/Card"
+import Data from "./Component/Data"
 
 import img_1 from "./img/1.jpg"
 import img_2 from "./img/2.jpg"
@@ -11,7 +12,7 @@ function App() {
   return (
     <div className="App flex flex-wrap items-center justify-evenly mt-4">
       
-          <Card img={img_1} Name="Alia Bhatt" Course="UI-UX Design" Discri="The UI/UX Design Specialization brings a design-centric approach to user interface and user experience design,"/>
+          {/* <Card img={img_1} Name="Alia Bhatt" Course="UI-UX Design" Discri="The UI/UX Design Specialization brings a design-centric approach to user interface and user experience design,"/>
 
        <Card img={img_2} Name="Anushka Sharma" Course="Full Stack Developer" Discri="Full stack development is the process of developing both the frontend and backend of applications."/>
 
@@ -21,7 +22,13 @@ function App() {
 
        <Card img={img_5} Name="Bhagat" Course="Game Development" Discri="Game development is the process of creating video games — using technical knowledge and skills to turn."/>
 
-       <Card img={img_6} Name="Akshay" Course="UI UX Design" Discri="The UI/UX Design Specialization brings a design-centric approach to user interface and user experience design,"/>  
+       <Card img={img_6} Name="Akshay" Course="UI UX Design" Discri="The UI/UX Design Specialization brings a design-centric approach to user interface and user experience design,"/>   */}
+
+       {Data.map((cvalue, ind , arr)=>{ 
+            return <Card key={ind} img={cvalue.img}
+            Name={cvalue.Name} Discri={cvalue.Discri} Course={cvalue.Course}/>
+          })}
+
     </div>
   );
 }
